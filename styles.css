@@ -829,6 +829,10 @@ select:focus {
         display: inline-flex;
         justify-content: space-evenly;
     }
+        }
+    .modalDialog > div{
+        width: 90%;
+    }
     .modalApp > div {
         width: 95%;
     }
