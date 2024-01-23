@@ -450,7 +450,10 @@ textarea::placeholder{
     font-size: 0.8rem;
 }
 /*Lottie */
-#LottieContainer {
+#results {
+    display: none;
+}
+#animatedIconContainer {
     width: 30%;
     height: auto;
 }
