@@ -249,7 +249,8 @@ img {
     background: transparent;
     text-align: start;
 }
-.modalDialog .modal-body  input[type="date"] {
+.modalDialog .modal-body input[type="date"] {
+    content:"";
     padding: 5px;
     width: 57%;
     border: none;
@@ -260,7 +261,10 @@ img {
     font-size: 0.9rem;
     background: transparent;
 }
-.modalDialog .modal-body  input[type="date"]::before{
+.modalDialog .modal-body input[type="date"]:not(.has-value):before{
+    content: attr(placeholder);
+}
+/* .modalDialog .modal-body  input[type="date"]::before{
     content: attr(placeholder);
 }
 .modalDialog .modal-body input[type="date"]:focus:before,
@@ -278,7 +282,7 @@ img {
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
-}
+} */
 .modalDialog .modal-body  select {
     justify-content: center;
     align-items: center;
@@ -396,6 +400,7 @@ textarea::placeholder{
         box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
     }
 .modalApp .modal-body input[type="date"] {
+    content:"";
     padding: 5px;
     border-radius: 5px;
     color: #000000;
@@ -405,7 +410,10 @@ textarea::placeholder{
     color: var(--light-color);
     background: transparent;
 }
-.modalApp .modal-body  input[type="date"]::before{
+.modalApp .modal-body input[type="date"]:not(.has-value):before{
+    content: attr(placeholder);
+}
+/* .modalApp .modal-body  input[type="date"]::before{
     content: attr(placeholder);
 }
 .modalApp .modal-body input[type="date"]:focus:before,
@@ -422,7 +430,7 @@ textarea::placeholder{
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
-}
+} */
 .modalApp .modal-body select {
     justify-content: center;
     align-items: center;
