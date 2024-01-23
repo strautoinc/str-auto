@@ -263,6 +263,15 @@ img {
 .modalDialog .modal-body  input[type="date"]::before{
     content: attr(placeholder);
 }
+.modalDialog .modal-body input[type="date"]:focus:before,
+.modalDialog .modal-body input[type="date"]:not([value=""]):before
+{
+  display: none;
+}
+.modalDialog .modal-body  input[type="date"]:focus:before,
+.modalDialog .modal-body   input[type="date"]:valid:before {
+    content: "";
+  }
 .modalDialog .modal-body input[type="date"]::before:focus {
     content: "" !important;
     outline: none;
