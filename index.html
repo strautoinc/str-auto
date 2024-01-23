@@ -23,7 +23,6 @@
             <div class="menu">
                 <ul>
                     <li>    
-                        <!-- <a href="#quoteModal" class="btn" type="button">   -->
                             <a href="tel:+17735720107" class="btn" type="button">
                             <i class="fas fa-phone"></i><span class="menu-btn"> CONTACT US</span> </a>
                     </li>
@@ -40,7 +39,7 @@
                 <div class="banner-content">
             <div class="banner-text">
                 <h1>STR AUTO </h1>
-                    <p> Elevating Transportation Standards </p>
+                    <p> Elevating Transportation Standarts </p>
             </div>
             <div class="main-buttons">
             <a href="#quoteModal" class="btn">  
@@ -48,10 +47,11 @@
                 <a href="#appModal" class="btn btn-main">  
                 <i class="fas fa-truck-pickup"></i> JOIN THE FLEET</a>
                          </div>
-                        </div>
+                        </div></div>
                                 <!--Modals-->                         
                 <div id="quoteModal" class="modalDialog">
-                    <div>	<a href="#close" title="Close" class="close">X</a>
+                    <div class="form-app">
+                        <a href="#close" title="Close" class="close">X</a>
                                 <form action="https://api.web3forms.com/submit" method="post" aria-autocomplete="on" id="formQ">
                                     <input type="hidden" name="access_key" value="e213281d-8902-4d84-952b-51c99ae114e5">
                                     <input type="hidden" name="subject" value="New Quote Request">
@@ -61,31 +61,51 @@
                                         <h2>REQUEST A QUOTE</h2>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="modal-form ">
-                                            <input type="text" name="pickUp" id="pickUp" placeholder="Pick Up Location" >
-                                            <input type="text" name="dropOff" id="dropOff" placeholder="Drop Off Location" >
-                                            <input type="text" name="pickUpDate" id="pickUpDate" placeholder="Pick Up Date"  onmouseleave="(this.type='text')" oninput="(this.type='date')" onfocus="(this.type='date')" >
-                                            <input type="text" name="dropOffDate" id="dropOffDate" placeholder="Drop Off Date"  onmouseleave="(this.type='text')" oninput="(this.type='date')" onfocus="(this.type='date')" >
-                                            <input type="text" name="vehicleType" id="vehicleType" placeholder="Vehicle Type" >
-                                            <input type="text" name="name" id="name" placeholder="Name">
+                                        <!-- <div class="modal-form"> -->
+                                            <div class="zip">
+                                            <label for="pickUp">From</label>
+                                            <input type="text" name="pickUp" id="pickUp" placeholder="Enter Pick-Up Zip Code" >
+                                            </div>
+                                            <div class="zip">
+                                            <label for="dropOff">To</label>
+                                            <input type="text" name="dropOff" id="dropOff" placeholder="Enter Delivery Zip Code" >
+                                            </div>
+                                            <div class="zip">
+                                            <label for="pickUpDate">Pick Up Date</label>
+                                            <input type="date" name="pickUpDate" id="pickUpDate" >
+                                            </div>
+                                            <div class="zip">
+                                            <label for="vehicleType">Transport Type</label>
+                                            <select name="vehicleType" id="vehicleType">
+                                                <option value="" disabled selected>Select...</option>
+                                                <option value="Coupe">Coupe</option>
+                                                <option value="Sedan">Sedan</option>
+                                                <option value="SUV">SUV</option>
+                                                <option value="Truck">Pick-Up Truck</option>
+                                                <option value="Van">Van</option>
+                                                </select>
+                                                </div>
+                                                <p>Contact Information</p>
+                                                <div class="person">
                                             <input type="email" name="email" id="email" placeholder="Email" required>
-                                            <input type="text" name="phone" id="phone" placeholder="Phone">
+                                            <input type="tel" name="phone" id="phone" placeholder="Phone">
                                         </div>
                                         <div class="modal-form">
                                             <textarea name="message" id="message" cols="5" rows="" placeholder="Message"></textarea>
                                             </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="submit" id="quoteForm" class="btn btn-main">SUBMIT</button>
+                                                <button type="submit" id="quoteForm" class="btn-app">SUBMIT</button>
                                                 </div>
                                 </form>
                                 </div>
                                 </div>
+                                </div>
                                              
             <div id="appModal" class="modalApp">
-                <div class="form-grid"> 
+                <div class="form-app"> 
                     <div class="modal-header">
-                        <h2>APPLY NOW</h2>
+                        <h2>DRIVER'S APPLICATION</h2>
                     </div>
                     	<div><a href="#close" title="Close" class="close">X</a></div>
                          <form action="https://api.web3forms.com/submit" method="post" aria-autocomplete="on" id="form">
@@ -95,20 +115,17 @@
                                 <input type="checkbox" name="botcheck" id="A" style="display: none;">
                                 <div class="modal-body ">
                                 <div class="modal-form">
-                                    <div class="name">
-                                    <input type="text" name="name" id="firstName" placeholder="First Name" required>
-                                    <input type="text" name="name" id="lastName" placeholder="Last Name" required>
-                                <input type="text" name="dob" class="dob" id="dob" placeholder="Date of Birth" onmouseleave="(this.type='text')" oninput="(this.type='date')" onfocus="(this.type='date')"/>
-                                </div>
-                                <div class="info">
-                                        <input type="email" name="email" id="email" placeholder="Email">
-                                    <input type="text" name="phone" id="phone" placeholder="Phone"></div>
-                                    <div class="address">
-                                    <input type="text" name="address" id="address" placeholder="Address" ></div>
-                                    <div class="address">
-                                    <input type="text" name="city" id="city" placeholder="City" >   
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="date" name="dob" class="dob" id="dob" />
+                                    <label for="email">Email</label>
+                                     <input type="email" name="email" id="email" placeholder="e.g. name@example.com">
+                                     <label for="phone">Phone Number</label>
+                                    <input type="tel" name="phone" id="phone" placeholder="e.g. +1(111)111-1111" >
+                                    <label for="state">Residency State</label>
                                     <select id="state" name="state">
-                                            <option value="" disabled selected>State</option>
+                                            <option value="" disabled selected>Select...</option>
                                             <option value="AL">AL</option>
                                             <option value="AK">AK</option>
                                             <option value="AR">AR</option>
@@ -161,12 +178,9 @@
                                             <option value="WV" >WV</option>
                                             <option value="WY">WY</option>
                                         </select>
-                                    <input type="text" name="zip" id="zip" placeholder="Zip Code">
-                                    </div>
-                                    <div class="dl">
-                                    <input type="text" name="license" id="license" placeholder="Drivers License Number">
+                                    <label for="DLstate">Drivers License State</label>
                                     <select id="DLstate" name="state">
-                                        <option value="" disabled selected>State</option>
+                                        <option value="" disabled selected>Select...</option>
                                         <option value="AL">AL</option>
                                         <option value="AK">AK</option>
                                         <option value="AR">AR</option>
@@ -219,10 +233,9 @@
                                         <option value="WV" >WV</option>
                                         <option value="WY">WY</option>
                                     </select>
-                                    </div>
-                                    <div class="info-more">
+                                    <label for="country">Citizenship</label>
                                     <select id="country">
-                                        <option value="" disabled selected>Citizenship</option>
+                                        <option value="" disabled selected>Select...</option>
                                         <option value="AFG">Afghanistan</option>
                                         <option value="ALA">Aland Islands</option>
                                         <option value="ALB">Albania</option>
@@ -473,62 +486,54 @@
                                         <option value="ZMB">Zambia</option>
                                         <option value="ZWE">Zimbabwe</option>
                                     </select>
+                                    <label for="status">Marital Status</label>
                                     <select name="status" class="form-select" id="status">
-                                        <option value="" disabled selected>Marital Status</option>
+                                        <option value="" disabled selected>Select...</option>
                                         <option value="single">Single</option>
                                         <option value="married">Married</option>
                                         <option value="divorced">Divorced</option>
                                         <option value="widowed">Widowed</option>
                                     </select>
-                                </div>
-                                <div class="toggles">
-                                    <div class="question">
-                                        <label class="Q">Do you have kids?</label>
-                                        <label class="toggle" for="kids">
-                                        <input class="sf" type="checkbox" role="switch" id="kids">
-                                    <span class="labels" data-on="YES" data-off="NO"></span>
-                                 </label>
-                                 </div>
-                                 <div class="question">
-                                     <label class="Q">Do you have an active LLC?</label>
-                                 <label class="toggle" for="LLC">
-                                    <input class="sf" type="checkbox" role="switch" id="LLC">
-                                <span class="labels" data-on="YES" data-off="NO"></span>
-                                </label></div>
-                                <div class="question">
-                                    <label class="Q">Do you have DOT Medical Certificate?</label>
-                                        <label class="toggle" for="DOT">
-                                            <input class="sf" type="checkbox" role="switch" id="DOT">
-                                        <span class="labels" data-on="YES" data-off="NO"></span>
-                                        </label></div>
-                                        <div class="question">
-                                            <label class="Q">Do you have prior experience?</label>
-                                    <label class="toggle" for="experience">
-                                        <input class="sf" type="checkbox" role="switch" id="experience">
-                                    <span class="labels" data-on="YES" data-off="NO"></span>
-                                    </label></div>
-                                    <div class="question">
-                                        <label class="Q">Are you legally authorized to work in US?</label>
-                                            <label class="toggle" for="work">
-                                                <input class="sf" type="checkbox" role="switch" id="work">
-                                            <span class="labels" data-on="YES" data-off="NO"></span>
-                                            </label></div>
-                                            <div class="question">
-                                                <label class="Q">Are you ready to start immidiately?</label>
-                                                    <label class="toggle" for="start">
-                                                        <input class="sf" type="checkbox" role="switch" id="start">
-                                                    <span class="labels" data-on="YES" data-off="NO"></span>
-                                                    </label></div>
-                                                </div>
-                                <div class="modal-form">
-                                    <textarea name="message" rows="5" id="message" placeholder="Please describe your previous work experience or relevant information here..."></textarea>
+                                </div><div class="toggles">
+                                    <div class="Q">
+                                        <label class="question">Do you have an active LLC?</label>
+                                        <div class="yes-no">
+                                            <input id="llc-yes" name="llc-toggle" type="radio">
+                                            <label for="llc-yes">Yes</label>
+                                            <input id="llc-no" name="llc-toggle" type="radio">
+                                            <label for="llc-no">No</label>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="toggles">
+                                    <div class="Q">
+                                        <label class="question">Are you legally authorized to work in the US?</label>
+                                        <div class="yes-no">
+                                            <input id="auth-yes" name="auth-toggle" type="radio">
+                                            <label for="auth-yes">Yes</label>
+                                            <input id="auth-no" name="auth-toggle" type="radio">
+                                            <label for="auth-no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="toggles">
+                                    <div class="Q">
+                                        <label class="question">Do you have prior experience?</label>
+                                        <div class="yes-no">
+                                            <input id="exp-yes" name="exp-toggle" type="radio">
+                                            <label for="exp-yes">Yes</label>
+                                            <input id="exp-no" name="exp-toggle" type="radio">
+                                            <label for="exp-no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <textarea name="message" rows="5" id="message" placeholder="Please describe your previous work experience or relevant information here..."></textarea>
+                                </div>
                                 <div class="modal-footer">
-                                    <button type="submit" id="appForm" class="btn btn-main">SUBMIT</button>
+                                    <button type="submit" id="appForm" class="btn-app">APPLY NOW</button>
                                     </div>                                    
                                     <div id="result">
-                                                <div id="animatedIconContainer"></div></div>
+                                 <div id="animatedIconContainer"></div></div>
                         </form>
                         </div>
                         </div>
@@ -570,25 +575,22 @@
                                 </a>
                             </li>
                         </ul>
+                        <br>
                         </div>
                     </div>
                     <div class="dot">
-                        <img src="images/fmcsa-logo-225px.webp" alt="dot" width="60" />
-                        <p>USDOT: <strong> 3423361 </strong> <br>MC: <strong>1107201 </strong>  </p>
+                        <img src="images/fmcsa-logo-225px.webp" alt="dot" width="50" />
+                        <p>USDOT <strong> 3423361 </strong> <br>MC-<strong>1107201 </strong>  </p>
                     </div>
                     <div class="contact">
                         <p>    244 S Randall Rd #1210 <br> 
                              Elgin, IL 60123
                         </p>
+                        <br>
                         <p> <a href="tel:+17735720107">
                             +1(773)572-0107 </a>
                              <br> 
-                            <a href="mailto:info@strautoinc.com">
-                                info@strautoinc.com </a>
-                        </p>
-                    </div>
-        </div>
-        <hr>
+                            <a href="mailto:info@strautoinc.com">info@strautoinc.com </a></p></div></div>
             <div class="footer-bottom">
                 <p class="text-xsm">©2024 STR AUTO INC &nbsp;  |  &nbsp; All Rights Reserved.</p>
             </div>
