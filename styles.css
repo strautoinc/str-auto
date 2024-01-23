@@ -250,13 +250,13 @@ img {
     text-align: start;
 }
 .modalDialog .modal-body input[type="date"] {
-    content:"";
+    content:"" !important;
     padding: 5px;
     width: 57%;
     border: none;
     border-radius: 5px;
     border: var(--light-color) 1px solid;
-    color: #fff;
+    color: var(--light-color);
     font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     background: transparent;
@@ -265,25 +265,6 @@ img {
     content: attr(placeholder);
     text-align: center;
 }
-/* .modalDialog .modal-body  input[type="date"]::before{
-    content: attr(placeholder);
-}
-.modalDialog .modal-body input[type="date"]:focus:before,
-.modalDialog .modal-body input[type="date"]:not([value=""]):before
-{
-  display: none;
-}
-.modalDialog .modal-body  input[type="date"]:focus:before,
-.modalDialog .modal-body   input[type="date"]:valid:before {
-    content: "";
-  }
-.modalDialog .modal-body input[type="date"]::before:focus {
-    content: "" !important;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
-} */
 .modalDialog .modal-body  select {
     justify-content: center;
     align-items: center;
@@ -401,13 +382,12 @@ textarea::placeholder{
         box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
 }
 .modalApp .modal-body input[type="date"] {
-    content:"";
+    content:"" !important;
     padding: 5px;
     border-radius: 5px;
-    color: #fff;
     font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
-    border: #fff 1px solid;
+    border: #var(--light-color) 1px solid;
     color: var(--light-color);
     background: transparent;
 }
@@ -415,24 +395,6 @@ textarea::placeholder{
     content: attr(placeholder);
     text-align:center;
 }
-/* .modalApp .modal-body  input[type="date"]::before{
-    content: attr(placeholder);
-}
-.modalApp .modal-body input[type="date"]:focus:before,
-.modalApp .modal-body input[type="date"]:not([value=""]):before{
-  display: none;
-}
-.modalApp .modal-body  input[type="date"]:focus:before,
-.modalApp .modal-body   input[type="date"]:valid:before {
-    content: "";
-  }
-.modalApp .modal-body input[type="date"]::before:focus {
-    content: "" !important;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
-} */
 .modalApp .modal-body select {
     justify-content: center;
     align-items: center;
