@@ -248,16 +248,20 @@ img {
     background: transparent;
     text-align: start;
 }
-.modalDialog .modal-body  input[type="date"] {
+.modalDialog .modal-body input[type="date"] {
+    content:"" !important;
     padding: 5px;
     width: 57%;
-    border: none;
     border-radius: 5px;
     border: var(--light-color) 1px solid;
     color: #000000;
     font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     background: transparent;
+}
+.modalDialog .modal-body input[type="date"]:not[value]:before{
+    content: attr(placeholder);
+    text-align: center;
 }
 .modalDialog .modal-body input[type="date"]:focus {
     outline: none;
@@ -389,8 +393,9 @@ textarea::placeholder{
         border: none;
         border-radius: 5px;
         box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
-    }
+}
 .modalApp .modal-body input[type="date"] {
+    content: "" !important;
     padding: 5px;
     border-radius: 5px;
     color: #000000;
@@ -400,11 +405,24 @@ textarea::placeholder{
     color: var(--light-color);
     background: transparent;
 }
+.modalApp .modal-body input[type="date"]:not[value]:before{
+    content: attr(placeholder);
+    text-align: center;
+}
 .modalApp .modal-body input[type="date"]:focus {
     outline: none;
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+.modalApp .modal-body ::placeholder,
+.modalApp .modal-body  ::-webkit-input-placeholder {
+    color: var(--light-color);
+    opacity: 1;
+}
+.modalApp .modal-body input[type="date"]{
+    color: var(--light-color);
+    opacity: 1;
 }
 .modalApp .modal-body select {
     justify-content: center;
@@ -695,6 +713,11 @@ textarea::placeholder{
         font-size: 0.8rem;
         text-decoration: none;
         text-transform: uppercase;
+    }
+    .btn:hover{
+        color: #000;
+        cursor: pointer;
+        background-color: var(--primary-color);
     }
     .btn i:hover{
         color: #000;
