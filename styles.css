@@ -256,13 +256,14 @@ img {
     border: none;
     border-radius: 5px;
     border: var(--light-color) 1px solid;
-    color: #000000;
+    color: #fff;
     font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     background: transparent;
 }
 .modalDialog .modal-body input[type="date"]:not(.has-value):before{
     content: attr(placeholder);
+    text-align: center;
 }
 /* .modalDialog .modal-body  input[type="date"]::before{
     content: attr(placeholder);
@@ -398,12 +399,12 @@ textarea::placeholder{
         border: none;
         border-radius: 5px;
         box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
-    }
+}
 .modalApp .modal-body input[type="date"] {
     content:"";
     padding: 5px;
     border-radius: 5px;
-    color: #000000;
+    color: #fff;
     font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     border: #fff 1px solid;
@@ -412,6 +413,7 @@ textarea::placeholder{
 }
 .modalApp .modal-body input[type="date"]:not(.has-value):before{
     content: attr(placeholder);
+    text-align:center;
 }
 /* .modalApp .modal-body  input[type="date"]::before{
     content: attr(placeholder);
