@@ -76,7 +76,7 @@ img {
 .main-banner {
     width: 100%;
     margin: 0;
-    padding: 15px;
+    padding: 0 15px;
 }
 .main-banner .container {
     background-size: cover ;
@@ -101,7 +101,7 @@ img {
     align-items: center;
     text-align: center;
     letter-spacing: 10px;
-    padding: 10px;
+    padding: 1.5%;
     background-color: rgba(255, 255, 255, 0.148);
 }
 .banner-text h1 {
@@ -125,11 +125,10 @@ img {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 10%;
 }
 /* Modals*/
 .close {
-    background: #aa5608d6;
+    background: #7c3f06d6;
     color: #FFFFFF;
     line-height: 25px;
     position: absolute;
@@ -181,8 +180,8 @@ img {
 .modalDialog .modal-header {
     line-height: 2rem;
     font-size: 1rem;
-    border-top: #ff9000 1px solid;
-    border-bottom: #ff9000 1px solid;
+    border-top: #ff7300 1px solid;
+    border-bottom: #ff7300 1px solid;
     color: #fff;
     margin: 5%;
 }
@@ -213,7 +212,7 @@ img {
     font-size: 1.3rem;
     margin: 3% 0;
     padding: 3% 0;
-    border-bottom: 1px solid #ff9000;
+    border-bottom: 1px solid #ff7300;
     border-top: 1px solid var(--light-color);
 }
 .modalDialog .modal-body input {
@@ -249,21 +248,22 @@ img {
     background: transparent;
     text-align: start;
 }
-.modalDialog .modal-body input[type="date"] {
-    content:"" !important;
+.modalDialog .modal-body  input[type="date"] {
     padding: 5px;
     width: 57%;
     border: none;
     border-radius: 5px;
     border: var(--light-color) 1px solid;
-    color: var(--light-color);
+    color: #000000;
     font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
     background: transparent;
 }
-.modalDialog .modal-body input[type="date"]:not(.has-value):before{
-    content: attr(placeholder);
-    text-align: center;
+.modalDialog .modal-body input[type="date"]:focus {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
 }
 .modalDialog .modal-body  select {
     justify-content: center;
@@ -284,6 +284,15 @@ img {
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+.modalDialog .modal-body ::placeholder,
+.modalDialog .modal-body  ::-webkit-input-placeholder {
+    color: var(--light-color);
+    opacity: 1;
+}
+.modalDialog .modal-body input[type="date"]{
+    color: var(--light-color);
+    opacity: 1;
 }
 .modalApp {
     position: fixed;
@@ -319,8 +328,8 @@ img {
 .modal-header {
     line-height: 2rem;
     font-size: 1rem;
-    border-top: #ff9000 1px solid;
-    border-bottom: #ff9000 1px solid;
+    border-top: #ff7300 1px solid;
+    border-bottom: #ff7300 1px solid;
     color: #fff;
     margin: 5%;
 }
@@ -341,7 +350,7 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 97%;
+    width: 90%;
     font-family: 'Nunito', sans-serif;
     text-transform: none;
     font-size: 0.9rem;
@@ -363,7 +372,7 @@ textarea::placeholder{
     box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
 }
 .modalApp .modal-body textarea {
-    width: 97%;
+    width: 90%;
     padding: 5px;
     text-transform: none;
     margin: 5px;
@@ -380,26 +389,28 @@ textarea::placeholder{
         border: none;
         border-radius: 5px;
         box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
-}
+    }
 .modalApp .modal-body input[type="date"] {
-    content:"" !important;
     padding: 5px;
     border-radius: 5px;
+    color: #000000;
     font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
-    border: #var(--light-color) 1px solid;
+    border: #fff 1px solid;
     color: var(--light-color);
     background: transparent;
 }
-.modalApp .modal-body input[type="date"]:not(.has-value):before{
-    content: attr(placeholder);
-    text-align:center;
+.modalApp .modal-body input[type="date"]:focus {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
 }
 .modalApp .modal-body select {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 97%;
+    width: 90%;
     font-family: 'Nunito', sans-serif;
     text-transform: none;
     font-size: 0.9rem;
@@ -420,40 +431,31 @@ textarea::placeholder{
 }
 .toggles label{
     padding: 5px 10px;
-    border: thin solid darkorange;
+    border: thin solid #ff7300;
     border-radius: 5px;
     font-size: 1rem;
-    display: inline-flex;
-    justify-content: space-evenly;
+    margin:0 10px;
 }
 .toggles label:hover{
     cursor: pointer;
 }
 .toggles .question{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     border: none;
-    flex-wrap: wrap;
 }   
 .toggles input[type="radio"]:checked + label{
     background-color: var(--primary-color);
     color: #fff;
 }
 .Q{
+    margin: 6%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     font-size: 0.8rem;
 }
 /*Lottie */
-#results {
-    display: none;
-}
-#animatedIconContainer {
+#LottieContainer {
     width: 30%;
     height: auto;
 }
@@ -597,32 +599,30 @@ textarea::placeholder{
     text-transform: uppercase;
 }
 .btn-main {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: thin solid #000;
+    background: transparent;
+    border:thin solid var(--primary-color);
+    color: #ff7300;
 }
 .btn:hover {
     background-color: var(--primary-color);
     color: #000;
-    border: thin solid #000;
+    border: thin solid #ff7300;
     cursor: pointer;
 }
 .btn-main:hover {
-    opacity: 0.8;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--primary-color);
+    border: thin solid #ff7300;
+    color: #fff;
     cursor: pointer;
 }
 .btn i:hover{
-    opacity: 0.8;
-    color: #000;
+    color: #fff;
     cursor: pointer;
     background-color: var(--primary-color);
 }
 .btn-main i:hover {
-    opacity: 0.8;
-    background-color: #fff;
-    color: #000;
+    background-color: #ff7300;
+    color: #fff;
     cursor: pointer;
 }
 .btn-app{
@@ -697,22 +697,27 @@ textarea::placeholder{
         text-transform: uppercase;
     }
     .btn i:hover{
-        opacity: 0.8;
         color: #000;
         cursor: pointer;
         background-color: var(--primary-color);
     }
     .btn-main {
-        background-color: var(--primary-color);
-        color: #fff;
-        border: thin solid #000;
+        background: transparent;
+        color: #ff7300;
+        border: thin solid var(--primary-color);
     }
     .btn-main i:hover {
         opacity: 0.8;
-        background-color: #fff;
+        background-color: var(--primary-color);
         color: #000;
         cursor: pointer;
     }   
+    .btn-main:hover {
+        background-color: var(--primary-color);
+        color: #000;
+        border: thin solid #ff7300;
+        cursor: pointer;
+    }
     .main-buttons{
         margin-top: 5%;
         font-size: 0.6rem;
@@ -769,5 +774,32 @@ textarea::placeholder{
     .footer .footer-bottom {
         text-align: center;
         font-size: 0.6rem;        
+    }  
+    .toggles input[type="radio"] {
+        display: none;  
+    }
+    .toggles label{
+        padding: 5px 10px;
+        border: thin solid #ff7300;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        margin:0 5px;
+    }
+    .toggles label:hover{
+        cursor: pointer;
+    }
+    .toggles .question{
+        border: none;
     }   
+    .toggles input[type="radio"]:checked + label{
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    .Q{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        font-size: 0.8rem;
+    }
 }
