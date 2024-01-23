@@ -299,15 +299,6 @@ img {
     border-radius: 5px;
     box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
 }
-.modalDialog .modal-body ::placeholder,
-.modalDialog .modal-body  ::-webkit-input-placeholder {
-    color: var(--light-color);
-    opacity: 1;
-}
-.modalDialog .modal-body input[type="date"]{
-    color: var(--light-color);
-    opacity: 1;
-}
 .modalApp {
     position: fixed;
     top: 0;
@@ -414,10 +405,18 @@ textarea::placeholder{
     color: var(--light-color);
     background: transparent;
 }
-.modalDialog .modal-body  input[type="date"]::before{
+.modalApp .modal-body  input[type="date"]::before{
     content: attr(placeholder);
 }
-.modalApp .modal-body input[type="date"]:focus {
+.modalApp .modal-body input[type="date"]:focus:before,
+.modalApp .modal-body input[type="date"]:not([value=""]):before{
+  display: none;
+}
+.modalApp .modal-body  input[type="date"]:focus:before,
+.modalApp .modal-body   input[type="date"]:valid:before {
+    content: "";
+  }
+.modalApp .modal-body input[type="date"]::before:focus {
     content: "" !important;
     outline: none;
     border: none;
