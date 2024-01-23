@@ -259,7 +259,11 @@ img {
     font-size: 0.9rem;
     background: transparent;
 }
-.modalDialog .modal-body input[type="date"]:focus {
+.modalDialog .modal-body  input[type="date"]::before{
+    content: attr(placeholder);
+}
+.modalDialog .modal-body input[type="date"]::before:focus {
+    content: "" !important;
     outline: none;
     border: none;
     border-radius: 5px;
