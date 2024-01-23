@@ -16,27 +16,19 @@
 <nav id="nav-menu">
     <div class="container">
                 <div class="logo">
-                    <a href="index.html">
-                <img src="images/str-logo-white.png" alt="logo" width="170" />
-                </a></div>
-            <div class="menu">
-                <ul><li>    <a href="tel:+17735720107" class="btn" type="button">
-                            <i class="fas fa-phone"></i><span class="menu-btn"> CONTACT US</span> </a>
-                    </li><li>      
-                        <a href="#appModal" class="btn btn-main" type="button">  
-                            <i class="fas fa-truck-pickup"></i> <span class="menu-btn"> JOIN THE FLEET</span></a>
-                    </li></ul></div></div></nav>
+                    <a href="index.html"><img src="images/str-logo-white.png" alt="logo" width="170" /></a></div>
+            <div class="menu"><ul>
+                    <li><a href="tel:+17735720107" class="btn" type="button"><i class="fas fa-phone"></i><span class="menu-btn"> CONTACT US</span> </a></li>
+                    <li><a href="#appModal" class="btn btn-main" type="button">  <i class="fas fa-truck-pickup"></i> <span class="menu-btn"> JOIN THE FLEET</span></a></li>
+                </ul></div></div></nav>
         <section class="main-banner">
             <div class="container">
                 <div class="banner-content">
-            <div class="banner-text">
-                <h1>STR AUTO </h1>
+            <div class="banner-text"><h1>STR AUTO </h1>
                     <p> Elevating Transportation Standarts </p></div>
             <div class="main-buttons">
-            <a href="#quoteModal" class="btn">  
-                <i class="fas fa-tags"></i> Get a quote</a>
-                <a href="#appModal" class="btn btn-main">  
-                <i class="fas fa-truck-pickup"></i> JOIN THE FLEET</a>
+            <a href="#quoteModal" class="btn">  <i class="fas fa-tags"></i> Get a quote</a>
+                <a href="#appModal" class="btn btn-main">  <i class="fas fa-truck-pickup"></i> JOIN THE FLEET</a>
                          </div></div></div>
                                 <!--Modals-->                         
                 <div id="quoteModal" class="modalDialog">
@@ -47,24 +39,20 @@
                                     <input type="hidden" name="subject" value="New Quote Request">
                                     <input type="hidden" name="redirect" value="window.location.hash">
                                     <input type="checkbox" name="botcheck" id="Q" style="display: none;">
-                                    <div class="modal-header">
-                                        <h2>REQUEST A QUOTE</h2></div>
-                                    <div class="modal-body">
-                                            <div class="zip">
+                                    <div class="modal-header"><h2>REQUEST A QUOTE</h2></div>
+                                    <div class="modal-body">                                           
+                                         <div class="zip">
                                             <label for="pickUp">From</label>
-                                            <input type="text" name="pickUp" id="pickUp" placeholder="Enter Pick-Up Zip Code" required >
-                                            </div>
+                                            <input type="text" name="pickUp" id="pickUp" placeholder="Enter Pick-Up Zip Code" ></div>
                                             <div class="zip">
                                             <label for="dropOff">To</label>
-                                            <input type="text" name="dropOff" id="dropOff" placeholder="Enter Delivery Zip Code"required >
-                                            </div>
+                                            <input type="text" name="dropOff" id="dropOff" placeholder="Enter Delivery Zip Code" ></div>
                                             <div class="zip">
                                             <label for="pickUpDate">Pick Up Date</label>
-                                            <input type="date" name="pickUpDate" id="pickUpDate" placeholder="mm/dd/yyyy">
-                                            </div>
+                                            <input  type="date" placeholder="mm/dd/yyyy" id="pickUpDate" name="pickUpDate" onClick="$(this).removeClass('placeholderclass')"class="dateclass placeholderclass"></div>
                                             <div class="zip">
                                             <label for="vehicleType">Transport Type</label>
-                                            <select name="vehicleType" id="vehicleType" required >
+                                            <select name="vehicleType" id="vehicleType" >
                                                 <option value="" disabled selected>Select...</option>
                                                 <option value="Coupe">Coupe</option>
                                                 <option value="Sedan">Sedan</option>
@@ -75,8 +63,7 @@
                                                 <p>Contact Information</p>
                                                 <div class="person">
                                             <input type="email" name="email" id="email" placeholder="Email" required>
-                                            <input type="tel" name="phone" id="phone" placeholder="Phone">
-                                        </div>
+                                            <input type="tel" name="phone" id="phone" placeholder="Phone"></div>
                                         <div class="modal-form">
                                             <textarea name="message" id="message" cols="5" rows="" placeholder="Message"></textarea>
                                             </div></div>
@@ -85,24 +72,23 @@
                                                 </div></form></div></div></div>
             <div id="appModal" class="modalApp">
                 <div class="form-app"> 
-                    <div class="modal-header">
-                        <h2>DRIVER'S APPLICATION</h2></div>
+                    <div class="modal-header"><h2>DRIVER'S APPLICATION</h2></div>
                     	<div><a href="#close" title="Close" class="close">X</a></div>
                          <form action="https://api.web3forms.com/submit" method="post" aria-autocomplete="on" id="form">
                             <input type="hidden" name="access_key" value="e213281d-8902-4d84-952b-51c99ae114e5">
                             <input type="hidden" name="subject" value="New Quote Request">
                                 <input type="hidden" name="redirect" value="window.location.hash">
                                 <input type="checkbox" name="botcheck" id="A" style="display: none;">
-                                <div class="modal-body">
+                                <div class="modal-body ">
                                 <div class="modal-form">
                                     <label for="name">Name</label>
                                     <input type="text" name="name" id="name" placeholder="Full Name" required>
                                     <label for="dob">Date of Birth</label>
-                                    <input type="date" name="dob" class="dob" id="dob" placeholder="mm/dd/yyyy" required/>
+                                    <input  type="date" placeholder="mm/dd/yyyy" id="dob" name="dob" onClick="$(this).removeClass('placeholderclass')"class="dateclass placeholderclass">
                                     <label for="email">Email</label>
                                      <input type="email" name="email" id="email" placeholder="e.g. name@example.com">
                                      <label for="phone">Phone Number</label>
-                                    <input type="tel" name="phone" id="phone" placeholder="e.g. +1(111)111-1111" required/ >
+                                    <input type="tel" name="phone" id="phone" placeholder="e.g. +1(111)111-1111" >
                                     <label for="state">Residency State</label>
                                     <select id="state" name="state">
                                             <option value="" disabled selected>Select...</option>
@@ -214,7 +200,7 @@
                                         <option value="WY">WY</option>
                                     </select>
                                     <label for="country">Citizenship</label>
-                                    <select id="country" required/>
+                                    <select id="country">
                                         <option value="" disabled selected>Select...</option>
                                         <option value="AFG">Afghanistan</option>
                                         <option value="ALA">Aland Islands</option>
@@ -472,17 +458,15 @@
                                         <option value="single">Single</option>
                                         <option value="married">Married</option>
                                         <option value="divorced">Divorced</option>
-                                        <option value="widowed">Widowed</option>
-                                    </select></div>                                    
-                                             <div class="toggles">
+                                        <option value="widowed">Widowed</option></select></div>                                    
+                                    <div class="toggles">
                                         <div class="Q">
                                             <label class="question">Are you legally authorized to work in the US?</label></div>
                                             <div class="yes-no">
                                                 <input id="auth-yes" name="auth-toggle" type="radio">
                                                 <label for="auth-yes">Yes</label>
                                                 <input id="auth-no" name="auth-toggle" type="radio">
-                                                <label for="auth-no">No</label>
-                                        </div></div>
+                                                <label for="auth-no">No</label></div></div>
                                 <div class="toggles">
                                     <div class="Q">
                                         <label class="question">Do you have an active LLC?</label></div>
@@ -500,44 +484,36 @@
                                             <label for="exp-yes">Yes</label>
                                             <input id="exp-no" name="exp-toggle" type="radio">
                                             <label for="exp-no">No</label>
-                                        </div></div>
+                                        </div></div><br>
                                     <textarea name="message" rows="5" id="message" placeholder="Please describe your previous work experience or relevant information here..."></textarea></div>
                                 <div class="modal-footer">
                                     <button type="submit" id="appForm" class="btn-app">APPLY NOW</button>
-                                    </div>                                     
-                                    <div id="result"><div id="LottieContainer"></div></div>
-                        </form></div></div></div></div>
-                </section>
+                                    </div>                                    
+                                    <div id="result">
+                                 <div id="animatedIconContainer">
+                                 </div></div></form></div></div></div></div></section>
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-grid">
         <div class="footer-menu">    
-                    <div class="footer-navbar">
-                        <ul><li><a href="#">HOME</a></li>
+                    <div class="footer-navbar"><ul>
+                            <li><a href="#">HOME</a></li>
                             <li><a href="#">CONTACT US</a></li>
-                            <li><a href="#">JOIN THE FLEET</a></li></ul></div>
-                    <div class="social">
-                        <ul><li><a href="#">
-                                    <i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://www.instagram.com/auto_transport_usa?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
-                                    <i class="fab fa-instagram"></i>
-                                </a></li><li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a></li></ul><br></div></div>
-                    <div class="dot">
-                        <img src="images/fmcsa-logo-225px.webp" alt="dot" width="50" />
-                        <p>USDOT:<strong> 3423361 </strong> <br>MC-<strong>1107201 </strong>  </p></div>
+                            <li><a href="#">JOIN THE FLEET</a></li>
+                        </ul></div><div class="social"><ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/auto_transport_usa?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        </ul><br></div></div><div class="dot">
+                        <img src="images/fmcsa-logo-225px.webp" alt="dot" width="50" /><p>USDOT <strong> 3423361 </strong> <br>MC-<strong>1107201 </strong>  </p></div>
                     <div class="contact">
                         <p>    244 S Randall Rd #1210 <br> Elgin, IL 60123</p><br>
-                        <p> <a href="tel:+17735720107">
-                            +1(773)572-0107 </a><br> <a href="mailto:info@strautoinc.com">info@strautoinc.com </a></p></div></div>
-            <div class="footer-bottom">
-                <p class="text-xsm">©2024 STR AUTO INC &nbsp;  |  &nbsp; All Rights Reserved.</p>
-            </div>
-        </div>
+                        <p> <a href="tel:+17735720107">+1(773)572-0107 </a><br> 
+                            <a href="mailto:info@strautoinc.com">info@strautoinc.com </a></p></div></div>
+            <div class="footer-bottom"><p class="text-xsm">©2024 STR AUTO INC &nbsp;  |  &nbsp; All Rights Reserved.</p></div></div>
     </footer>
 <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
 </body>
 </html>
