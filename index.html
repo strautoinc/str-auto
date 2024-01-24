@@ -19,21 +19,17 @@
                     <a href="index.html"><img src="images/str-logo-white.png" alt="logo" width="170" /></a></div>
             <div class="menu"><ul>
                     <li><a href="tel:+17735720107" class="btn" type="button"><i class="fas fa-phone"></i><span class="menu-btn"> CONTACT US</span> </a></li>
-                    <li><a href="#appModal" class="btn btn-main" type="button">  <i class="fas fa-truck-pickup"></i> <span class="menu-btn"> JOIN THE FLEET</span></a></li>
-                </ul></div></div></nav>
+                    <li><a href="#appModal" class="btn btn-main" type="button">  <i class="fas fa-truck-pickup"></i> <span class="menu-btn"> JOIN THE FLEET</span></a></li></ul></div></div></nav>
         <section class="main-banner">
             <div class="container">
                 <div class="banner-content">
-            <div class="banner-text"><h1>STR AUTO </h1>
-                    <p> Elevating Transportation Standarts </p></div>
+            <div class="banner-text"><h1>STR AUTO </h1><p> Elevating Transportation Standarts </p></div>
             <div class="main-buttons">
             <a href="#quoteModal" class="btn">  <i class="fas fa-tags"></i> Get a quote</a>
-                <a href="#appModal" class="btn btn-main">  <i class="fas fa-truck-pickup"></i> JOIN THE FLEET</a>
-                         </div></div></div>
+                <a href="#appModal" class="btn btn-main">  <i class="fas fa-truck-pickup"></i> JOIN THE FLEET</a></div></div></div>
                                 <!--Modals-->                         
                 <div id="quoteModal" class="modalDialog">
-                    <div class="form-app">
-                        <a href="#close" title="Close" class="close">X</a>
+                    <div class="form-app"><a href="#close" title="Close" class="close">X</a>
                                 <form action="https://api.web3forms.com/submit" method="post" aria-autocomplete="on" id="formQ">
                                     <input type="hidden" name="access_key" value="e213281d-8902-4d84-952b-51c99ae114e5">
                                     <input type="hidden" name="subject" value="New Quote Request">
@@ -49,7 +45,7 @@
                                             <input type="text" name="dropOff" id="dropOff" placeholder="Enter Delivery Zip Code" ></div>
                                             <div class="zip">
                                             <label for="pickUpDate">Pick Up Date</label>
-                                            <input  type="date" placeholder="mm/dd/yyyy" id="pickUpDate" name="pickUpDate" onClick="$(this).removeClass('placeholderclass')"class="dateclass placeholderclass"></div>
+                                            <input  type="date" placeholder="mm/dd/yyyy" id="pickUpDate" name="pickUpDate"  value="" onChange="this.setAttribute('value', this.value)"></div>
                                             <div class="zip">
                                             <label for="vehicleType">Transport Type</label>
                                             <select name="vehicleType" id="vehicleType" >
@@ -58,18 +54,15 @@
                                                 <option value="Sedan">Sedan</option>
                                                 <option value="SUV">SUV</option>
                                                 <option value="Truck">Pick-Up Truck</option>
-                                                <option value="Van">Van</option>
-                                                </select></div>
+                                                <option value="Van">Van</option></select></div>
                                                 <p>Contact Information</p>
                                                 <div class="person">
                                             <input type="email" name="email" id="email" placeholder="Email" required>
                                             <input type="tel" name="phone" id="phone" placeholder="Phone"></div>
                                         <div class="modal-form">
-                                            <textarea name="message" id="message" cols="5" rows="" placeholder="Message"></textarea>
-                                            </div></div>
+                                            <textarea name="message" id="message" cols="5" rows="" placeholder="Message"></textarea></div></div>
                                             <div class="modal-footer">
-                                                <button type="submit" id="quoteForm" class="btn-app">SUBMIT</button>
-                                                </div></form></div></div></div>
+                                                <button type="submit" id="quoteForm" class="btn-app">SUBMIT</button></div></form></div></div></div>
             <div id="appModal" class="modalApp">
                 <div class="form-app"> 
                     <div class="modal-header"><h2>DRIVER'S APPLICATION</h2></div>
@@ -84,7 +77,7 @@
                                     <label for="name">Name</label>
                                     <input type="text" name="name" id="name" placeholder="Full Name" required>
                                     <label for="dob">Date of Birth</label>
-                                    <input  type="date" placeholder="mm/dd/yyyy" id="dob" name="dob" onClick="$(this).removeClass('placeholderclass')"class="dateclass placeholderclass">
+                                    <input  type="date" placeholder="mm/dd/yyyy" id="dob" name="dob" value="" onChange="this.setAttribute('value', this.value)">
                                     <label for="email">Email</label>
                                      <input type="email" name="email" id="email" placeholder="e.g. name@example.com">
                                      <label for="phone">Phone Number</label>
@@ -507,8 +500,8 @@
                         </ul><br></div></div><div class="dot">
                         <img src="images/fmcsa-logo-225px.webp" alt="dot" width="50" /><p>USDOT <strong> 3423361 </strong> <br>MC-<strong>1107201 </strong>  </p></div>
                     <div class="contact">
-                        <p>    244 S Randall Rd #1210 <br> Elgin, IL 60123</p><br>
-                        <p> <a href="tel:+17735720107">+1(773)572-0107 </a><br> 
+                        <p>244 S Randall Rd #1210 <br> Elgin, IL 60123</p><br>
+                        <p><a href="tel:+17735720107">+1(773)572-0107 </a><br> 
                             <a href="mailto:info@strautoinc.com">info@strautoinc.com </a></p></div></div>
             <div class="footer-bottom"><p class="text-xsm">©2024 STR AUTO INC &nbsp;  |  &nbsp; All Rights Reserved.</p></div></div>
     </footer>
