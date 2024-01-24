@@ -358,6 +358,10 @@ select:focus {
 #LottieContainer {
     width: 30%;
     height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-itemks: center;
 }
 /* Footer */
 .footer {
