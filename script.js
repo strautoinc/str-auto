@@ -19,7 +19,7 @@ const result = document.getElementById('result');
 
 // Lottie //
 function playAnimation() {
-    const animationPath = 'images/GtMdyX8iUw.json';
+    const animationPath = 'images/lottie.json';
     const container = document.getElementById('result');
 
     const animation = lottie.loadAnimation({
