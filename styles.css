@@ -352,6 +352,9 @@ select:focus {
     font-size: 0.9rem;
 }
 /*Lottie */
+#result{
+    display: none;
+}
 #LottieContainer {
     width: 30%;
     height: auto;
