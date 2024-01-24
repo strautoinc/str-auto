@@ -123,6 +123,7 @@ img {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom:3%;
 }
 /* Modals*/
 .close {
@@ -234,20 +235,6 @@ textarea {
     font-size: 0.9rem;
     background: transparent;
 }
-input[type="date"] {
-    content:"" !important;
-    padding: 5px;
-    width: 57%;
-    border-radius: 5px;
-    border: var(--light-color) 1px solid;
-    color: var(--light-color);
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.9rem;
-    background: transparent;
-}
-input[type="date"]:not[value]:before{
-    content: attr(placeholder);
-}
 select {
     width: 57%;
     font-family: 'Nunito', sans-serif;
@@ -261,21 +248,32 @@ select {
 }
 input:focus,
 textarea:focus,
-select:focus,
-input[type="date"]:focus {
+select:focus {
     outline: none;
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 0 0.1rem rgba(0, 162, 255, 0.645);
 }
-::placeholder,
-::-webkit-input-placeholder {
-    color: var(--light-color);
-    opacity: 1;
+input[type="date"] {
+    position: relative;
 }
-input[type="date"]::placeholder{
+input[type="date"]:before {
+    content: attr(placeholder);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
     color: var(--light-color);
-    opacity: 1;
+    pointer-events: none;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    padding: 0 0.6rem;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:not([value=""]):before{
+    display: none;
 }
 .modalApp {
     position: fixed;
@@ -326,17 +324,6 @@ input[type="date"]::placeholder{
 .modalApp .modal-body .modal-form textarea{
     width: 85%;
     margin-bottom: 5%;   
-}
-.dateclass {
-    width: 90%;
-}
-.dateclass .placeholderclass::before{
-    width: 90%;
-    content: attr(placeholder);
-}
-.dateclass .placeholderclass:hover::before{
-    width: 0%;
-    content: "";
 }
 .toggles input[type="radio"] {
     display: none;  
@@ -458,12 +445,6 @@ input[type="date"]::placeholder{
     margin: 0 auto;
     padding: 0 15px;
 }
-.container-fluid {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 15px;
-}
 .container-sm {
     max-width: 800px;
     margin: 0 auto;
@@ -472,9 +453,6 @@ input[type="date"]::placeholder{
 /* Text Classes */
 .text-center {
     text-align: center;
-}
-.text-justify {
-    text-align: justify;
 }
 .text-xxl {
     font-size: 2.5rem;
