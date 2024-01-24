@@ -52,7 +52,8 @@ function submitForm() {
             playAnimation();
         } else {
             console.log(response);
-            result.innerHTML = jsonResponse.message;
+            result.style.display = "block";
+            playAnimation();
         }
     })
     .catch((error) => {
