@@ -319,6 +319,27 @@ input[type="date"]:before {
     flex-direction: column;
     align-items: center;
 }
+.modalApp .modal-body input[type="date"] {
+    position: relative;
+}
+.modalApp .modal-body input[type="date"]:before {
+    content: attr(placeholder);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    color: var(--light-color);
+    pointer-events: none;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    padding: 0 0.6rem;
+  }
+  .modalApp .modal-body input[type="date"]:focus:before,
+  .modalApp .modal-body input[type="date"]:not([value=""]):before{
+    display: none;
+}
 .modalApp .modal-body .modal-form select,
 .modalApp .modal-body .modal-form input,
 .modalApp .modal-body .modal-form textarea{
