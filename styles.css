@@ -34,7 +34,6 @@ ul {
 img {
     max-width: 100%;
 }
-/* Navbar */
 #nav-menu {
     background-color: var(--dark-color);
     width: 100%;
@@ -72,7 +71,6 @@ img {
 .container .logo {
     margin: 1%;
 }
-/* Banner */
 .main-banner {
     width: 100%;
     margin: 0;
@@ -125,7 +123,6 @@ img {
     flex-wrap: wrap;
     margin-bottom:3%;
 }
-/* Modals*/
 .close {
     background: #7c3f06d6;
     color: #FFFFFF;
@@ -330,19 +327,13 @@ select:focus {
     text-align: center;
     font-size: 0.9rem;
 }
-/*Lottie */
 #result{
-    display: none;
+    display: block;
 }
 #LottieContainer {
     width: 30%;
     height: auto;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-itemks: center;
 }
-/* Footer */
 .footer {
     width: 100%;
     display: flex;
@@ -436,7 +427,6 @@ select:focus {
     margin: 0 auto;
     padding: 0 15px;
 }
-/* Text Classes */
 .text-center {
     text-align: center;
 }
@@ -458,7 +448,6 @@ select:focus {
 .text-xs {
     font-size: 0.8rem;
 }
-/* Button Classes */
 .btn {
     background: transparent;
     display: inline-block;
