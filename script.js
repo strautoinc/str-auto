@@ -70,5 +70,4 @@ function submitForm() {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     submitForm();
-    playAnimation();
 });
