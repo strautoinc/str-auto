@@ -44,7 +44,7 @@
                                             <input type="text" name="dropOff" id="dropOff" placeholder="Enter Delivery Zip Code" required ></div>
                                             <div class="zip">
                                             <label for="pickUpDate">Pick Up Date</label>
-                                            <input  type="date" placeholder="mm/dd/yyyy" id="pickUpDate" name="pickUpDate"></div>
+                                            <input  type="date" id="pickUpDate" name="pickUpDate"></div>
                                             <div class="zip">
                                             <label for="vehicleType">Transport Type</label>
                                             <select name="vehicleType" id="vehicleType" required>
@@ -57,8 +57,7 @@
                                                 <p>Contact Information</p>
                                                 <div class="person">
                                             <input type="email" name="email" id="email" placeholder="Email" required>
-                                            <input type="button" value="Phone" onclick="tel();" />
-<!--                                             <input type="tel" name="phone" id="phone" placeholder="Phone"></div> -->
+                                            <input type="tel" name="phone" id="phone" placeholder="Phone Number"></div>
                                         <div class="modal-form">
                                             <textarea name="message" id="message" cols="5" rows="" placeholder="Message"></textarea></div></div>
                                             <div class="modal-footer">
@@ -74,14 +73,13 @@
                                 <div class="modal-body ">
                                 <div class="modal-form">
                                     <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                    <input type="text" name="name" id="name" required>
                                     <label for="dob">Date of Birth</label>
-                                    <input  type="date" placeholder="mm/dd/yyyy" id="dob" name="dob" required>
+                                    <input  type="date" id="dob" name="dob" required>
                                     <label for="email">Email</label>
                                      <input type="email" name="email" id="email" pattern=".+@example\.com" ">
                                      <label for="phone">Phone Number</label>
-<!--                                     <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> -->
-                                            <input type="button" value="Phone" onclick="tel();" />
+                                    <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                                     <label for="state">Residency State</label>
                                     <select id="state" name="state">
                                             <option value="" disabled selected>Select...</option>
