@@ -72,18 +72,3 @@ form.addEventListener("submit", function (e) {
     submitForm();
     playAnimation();
 });
-/* input  */
-
-function tel()
-{
-const message = document.getElementById("InsertRecordTEL").value; // here you get what the end-user typed
-
-document.getElementById("InsertRecordTEL").value = (message.replace(/[^\d]/g, '')); // then you strip off all the spaces
-
-const message1 = document.getElementById("InsertRecordTEL").value;
-document.getElementById("InsertRecordTEL").value = ("(" + message1.substring(0,3) + ") " + message1.substring(3,6) + "-" + message1.substring(6,10));
-
-}
-
-document.getElementById("caspioform").onsubmit=tel;
-
