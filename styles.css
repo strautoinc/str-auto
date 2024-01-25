@@ -328,7 +328,15 @@ select:focus {
     font-size: 0.9rem;
 }
 #result{
-    display: block;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000000d9 !important;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 #LottieContainer {
     width: 30%;
