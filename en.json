@@ -8,17 +8,16 @@
     "DLstate": "Driver License State",
     "country": "Citizenship",
     "status": "Marital Status",
-    "statusOptions": {
-        "single": "Single",
-       "married": "Married",
-       "divorced": "Divorced",
-       "widowed": "Widowed"
-    },
+    "status-single": "Single",
+    "status-married": "Married",
+    "status-divorced": "Divorced",
     "work": "Are you legally authorized to work in the US?",
     "yes": "Yes",
     "no": "No",
     "llc": "Do you have an active LLC?",
     "exp": "Do you have prior experience?",
-    "message": "Please provide a brief description of your experience, or any other relative information you would like to share...",
-    "apply": "Apply Now"
+    "apply": "Apply Now",
+    "placeholder-name": "Enter full name",
+    "placeholder-dob": "mm/dd/yyyy",
+    "placeholder-message": "Please provide a brief description of your experience, or any other relative information you would like to share..."
 }
