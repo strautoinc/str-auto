@@ -20,7 +20,7 @@
                     <a href="index.html"><img src="images/str-logo-white.png" alt="logo" width="170" /></a></div>
             <div class="menu"><ul>
                     <li><a href="tel:+17735720107" class="btn" type="button"><i class="fas fa-phone"></i><span class="menu-btn"> CONTACT US</span> </a></li>
-                    <li><a href="#appModal" class="btn btn-main" type="button">  <i class="fas fa-truck-pickup"></i> <span class="menu-btn"> JOIN THE FLEET</span></a></li></ul></div></div></nav>
+                    <li><a href="#appModal" class="btn btn-main" id="join" type="button">  <i class="fas fa-truck-pickup"></i> <span class="menu-btn"> JOIN THE FLEET</span></a></li></ul></div></div></nav>
         <section class="main-banner">
             <div class="container">
                 <div class="banner-content">
@@ -66,28 +66,27 @@
                                            <div id="result"><div id="LottieContainer"></div></div></form></div></div</div></div></div>
             <div id="appModal" class="modalApp">
                 <div class="form-app"> 
-                     <div class="form-app"><h5>Select Language:</h5>
+                      <div class="form-app"><h5>Select Language:</h5>
                     <div class="tri-state-toggle" id="language-switcher">
                         <button class="tri-state-toggle-button active" onclick="switchLanguage('en')" data-language="en" id="toggle-button1">EN</button>
                         <button class="tri-state-toggle-button" onclick="switchLanguage('ukr')" data-language="ukr" id="toggle-button2">UKR</button>
                         <button class="tri-state-toggle-button" onclick="switchLanguage('ru')" data-language="ru" id="toggle-button3">RU</button></div>
-                        <div class="modal-header" data-translate="head"><h2>DRIVER'S APPLICATION</h2></div>
+                        <div class="modal-header" data-translate="head"><h1>DRIVER'S APPLICATION</h1></div>
                     	<div><a href="#close" title="Close" class="close">X</a></div>
                          <form action="https://api.web3forms.com/submit" method="post" aria-autocomplete="on" id="form">
-                            <input type="hidden" name="access_key" value="1fa79a55-1ded-4acf-96ae-7b0eae27f1aa">
+                            <input type="hidden" name="access_key" value="e213281d-8902-4d84-952b-51c99ae114e5">
                             <input type="hidden" name="subject" value="New Job Application">
-                                <input type="hidden" name="redirect" value="window.location.hash">
                                 <input type="checkbox" name="botcheck" id="A" style="display: none;">
                                 <div class="modal-body ">
                                 <div class="modal-form">
-                                    <label for="name" data-translate="name">Name</label>
-                                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                     <label for="name" data-translate="name">Name</label>
+                                    <input type="text" name="name" class="name" id="name" placeholder="Full Name" required>
                                     <label for="dob"  data-translate="dob">Date of Birth</label>
-                                    <input  type="date" placeholder="mm/dd/yyyy" id="dob" name="dob" required>
+                                    <input  type="date" placeholder="mm/dd/yyyy" id="dob" class="dob" name="dob" required>
                                     <label for="email"  data-translate="email">Email</label>
                                      <input type="email" name="email" id="email" placeholder="e.g. name@example.com">
                                      <label for="phone" data-translate="phone">Phone Number</label>
-                                    <input type="tel" name="phone" id="phone" placeholder="e.g. +1(111)111-1111" >
+                                    <input type="tel" name="phone" id="phone" placeholder="e.g. +1(111)111-1111" required >
                                     <label for="state" data-translate="state">Residency State</label>
                                     <select id="state" name="state">
                                             <option value="" disabled selected>Select...</option>
@@ -451,13 +450,12 @@
                                         <option value="ZMB">Zambia</option>
                                         <option value="ZWE">Zimbabwe</option>
                                     </select>
-                                    <label data-translate="status" for="status">Marital Status</label>
+                                   <label data-translate="status" onchange="switchLanguage(this.value)" for="status">Marital Status</label>
                                     <select name="status" class="form-select" id="status">
                                         <option value="" disabled selected>Select...</option>
-                                        <option value="single" data-translate="single">Single</option>
-                                        <option value="married" data-translate="married">Married</option>
-                                        <option value="divorced" data-translate="divorced">Divorced</option>
-                                        <option value="widowed" data-translate="widowed">Widowed</option></select></div>                                    
+                                        <option value="single" data-translate="status-single">Single</option>
+                                        <option value="married" data-translate="status-married">Married</option>
+                                        <option value="divorced" data-translate="status-divorced">Divorced</option></select></div>                                          
                                     <div class="toggles">
                                         <div class="Q">
                                             <label class="question" data-translate="work">Are you legally authorized to work in the US?</label></div>
@@ -482,7 +480,7 @@
                                             <label for="exp-yes" data-translate="yes">Yes</label>
                                             <input id="exp-no" name="exp-toggle" type="radio">
                                             <label for="exp-no" data-translate="no">No</label></div></div><br>
-                                    <textarea name="message" rows="5" id="message" data-translate="message" placeholder="Please provide a brief description of your experience, or any other relative information you would like to share..."></textarea></div>
+                                    <textarea name="message" rows="5" id="please" data-translate="message" placeholder="Please provide a brief description of your experience, or any other relative information you would like to share..."></textarea></div>
                                 <div class="modal-footer">
                                     <button type="submit" id="appForm" data-translate="apply" class="btn-app">APPLY NOW</button>
                                     </div>                                    
