@@ -109,7 +109,7 @@ img {
 }
 .banner-text p {
     font-size: 1.1rem;
-    padding-top: 0.5%;
+    padding: 1%;
     color: #ffffff;
     border-top: 1px solid var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
