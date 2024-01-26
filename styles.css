@@ -7,9 +7,10 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --primary-color: #e9622ddf;
+    --primary-color: #e9622d;
     --dark-color: #000000d1;
     --light-color: #ccc;
+    --danger-color: #ff00ea;
 }
 body {
     display: flex;
@@ -19,8 +20,8 @@ body {
     line-height: 1.2;
     background-image: url(images/str.png);
     background-size: 10%;
-    background-color: #303030;
-    background-blend-mode:color-burn;
+    background-blend-mode:hue;
+    background-color: #2c3b3fcf;
     background-repeat:repeat;
     background-attachment: fixed;
     color: #fff;
@@ -34,6 +35,7 @@ ul {
 img {
     max-width: 100%;
 }
+/* Navbar */
 #nav-menu {
     background-color: var(--dark-color);
     width: 100%;
@@ -71,6 +73,7 @@ img {
 .container .logo {
     margin: 1%;
 }
+/* Banner */
 .main-banner {
     width: 100%;
     margin: 0;
@@ -123,6 +126,7 @@ img {
     flex-wrap: wrap;
     margin-bottom:3%;
 }
+/* Modals*/
 .close {
     background: #7c3f06d6;
     color: #FFFFFF;
@@ -245,14 +249,11 @@ select {
 }
 input:focus,
 textarea:focus,
-select:focus {
+select:focus{
     outline: none;
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 0 0.1rem rgba(0, 162, 255, 0.645);
-}
-::placeholder {
-    color: #8a8686ed;
 }
 .modalApp {
     position: fixed;
@@ -284,6 +285,55 @@ select:focus {
     margin: 5% auto;
     border-radius: 5px;
     background-color: #000000d1;
+}
+.modal-header {
+    line-height: 2rem;
+    font-size: 1rem;
+    border-top: #ff7300 1px solid;
+    border-bottom: #ff7300 1px solid;
+    color: #fff;
+    margin: 5%;
+}
+.modalApp .modal-body .modal-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modalApp .modal-body .modal-form select,
+.modalApp .modal-body .modal-form input,
+.modalApp .modal-body .modal-form textarea{
+    width: 85%;
+    margin-bottom: 5%;   
+}
+::placeholder {
+    color: #8a8686ed;
+}
+
+.toggles input[type="radio"] {
+    display: none;  
+}
+.toggles label{
+    padding: 5px 10px;
+    border: thin solid #ff7300;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin:0 10px;
+}
+.toggles label:hover{
+    cursor: pointer;
+}
+.toggles .question{
+    border: none;
+}   
+.toggles input[type="radio"]:checked + label{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.Q{
+    margin: 2%;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
 }
 .tri-state-toggle {
     background: rgba(0,0,0,0.8);
@@ -320,51 +370,7 @@ select:focus {
 .tri-state-toggle-button:focus {
     outline: none;
 }
-.modal-header {
-    line-height: 2rem;
-    font-size: 1rem;
-    border-top: #ff7300 1px solid;
-    border-bottom: #ff7300 1px solid;
-    color: #fff;
-    margin: 5%;
-}
-.modalApp .modal-body .modal-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.modalApp .modal-body .modal-form select,
-.modalApp .modal-body .modal-form input,
-.modalApp .modal-body .modal-form textarea{
-    width: 85%;
-    margin-bottom: 5%;   
-}
-.toggles input[type="radio"] {
-    display: none;  
-}
-.toggles label{
-    padding: 5px 10px;
-    border: thin solid #ff7300;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin:0 10px;
-}
-.toggles label:hover{
-    cursor: pointer;
-}
-.toggles .question{
-    border: none;
-}   
-.toggles input[type="radio"]:checked + label{
-    background-color: var(--primary-color);
-    color: #fff;
-}
-.Q{
-    margin: 2%;
-    align-items: center;
-    text-align: center;
-    font-size: 0.9rem;
-}
+/*Lottie */
 #result{
     display: none;
     position: fixed;
@@ -380,6 +386,7 @@ select:focus {
     width: 30%;
     height: auto;
 }
+/* Footer */
 .footer {
     width: 100%;
     display: flex;
@@ -417,8 +424,46 @@ select:focus {
     color: var(--primary-color);
     transition: 0.5s;
 }
+#floating-button {
+    position: fixed;
+    bottom: 25%;
+    right: 5%;
+    color: #055bfb;
+    border: none;
+    padding: 1%;
+    border-radius: 10%;
+    border: 1px solid var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    animation: pulsate 1s infinite alternate;
+    display: none;
+}
+#floating-button:hover .tooltip {
+    opacity: 1;
+}
+.tooltip {
+    position: fixed;
+    right: 80%;
+    width: 5rem;
+    font-size: 1rem;
+    bottom: 90%;
+    color: var(--primary-color);
+    border: 1px solid #055bfb;
+    padding: 30%;
+    border-radius: 10%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+@keyframes pulsate {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+}
 .dot {
-    text-align: end;
+    text-align: flex-start;
 }
 .dot img {
     opacity: 0.7;
@@ -443,6 +488,10 @@ select:focus {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 3fr);
+}
+.footer-grid .banner-call {
+    grid-column: 5;
+    grid-row: 1;
 }
 .footer-grid .dot {
     grid-column: 5;
@@ -474,6 +523,7 @@ select:focus {
     margin: 0 auto;
     padding: 0 15px;
 }
+/* Text Classes */
 .text-center {
     text-align: center;
 }
@@ -495,6 +545,7 @@ select:focus {
 .text-xs {
     font-size: 0.8rem;
 }
+/* Button Classes */
 .btn {
     background: transparent;
     display: inline-block;
@@ -549,22 +600,26 @@ select:focus {
     color: #fff;
     cursor: pointer;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 800px) {
+    body {
+        background-color: #303030;
+        background-blend-mode:color-burn;
+    }
     #nav-menu{
         padding: 5%;
     }
     #nav-menu .logo {
-        width: 150px;
+        width: 120px;
     }
-    .menu i{
+    .menu {
         font-size: 1.5rem;
         padding: 7px;
     }
-    .menu a{
-        font-size: 0.9rem;
-    }
     .menu-btn {
         display: none; 
+    }
+    #nav-phone {
+        display: none;
     }
     .main-banner .container {
         background-size: contain ;
@@ -628,8 +683,7 @@ select:focus {
         cursor: pointer;
     }
     .main-buttons{
-        margin-top: 5%;
-        font-size: 0.6rem;
+        margin: 5%;
         display: inline-flex;
         justify-content: space-evenly;
     }
@@ -664,6 +718,15 @@ select:focus {
         margin: 7% ;
         width: 20%;
     }
+    .banner-call{
+        justify-content: end;
+        align-items: right;
+        text-align: right;    
+    }
+    .banner-call i{
+        font-size: 0.9rem;
+        padding: 0.5%;
+    }
     .contact{
         display: flex;
         flex-direction: column;
@@ -672,6 +735,10 @@ select:focus {
         grid-row: 2;
         grid-column: 5;
     }  
+    .footer-grid .banner-call {
+        grid-column: 5;
+        grid-row: 2;
+    }
     .footer-grid .footer-menu {
         grid-column: 1;
         grid-row: 2;
@@ -712,5 +779,20 @@ select:focus {
     .yes-no{
         display: flex;
         justify-content: flex-end;
+    }
+    #floating-button {
+        position: fixed;
+        bottom: 9%;
+        z-index: 10;
+        right: 5%;
+        color: #055bfb;
+        border: none;
+        padding: 1%;
+        border-radius: 10%;
+        border: 1px solid var(--primary-color);
+        font-size: 1.2rem;
+        cursor: pointer;
+        animation: pulsate 1s infinite alternate;
+        display: none;
     }
 }
