@@ -73,6 +73,14 @@ img {
 #join {
     animation: pulsate 1s infinite alternate;
 }
+@keyframes pulsate {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+}
 .container .logo {
     margin: 1%;
 }
@@ -429,7 +437,7 @@ select:focus{
 }
 #floating-button {
     position: fixed;
-    bottom: 35%;
+    bottom: 45%;
     right: 5%;
     color: #055bfb;
     border: none;
@@ -455,14 +463,6 @@ select:focus{
     border-radius: 10%;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
-@keyframes pulsate {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.2);
-    }
 }
 .dot {
     text-align: flex-start;
