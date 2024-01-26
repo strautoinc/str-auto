@@ -437,7 +437,7 @@ select:focus{
 }
 #floating-button {
     position: fixed;
-    bottom: 45%;
+    bottom: 25%;
     right: 5%;
     color: #055bfb;
     border: none;
