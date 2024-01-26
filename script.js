@@ -144,12 +144,15 @@ document.querySelectorAll('.tri-state-toggle-button').forEach(button => {
 
 
 const linkInfo = [
-    { color: '#fff', text: 'ПОТРБНI ВОДII' },
+    { color: '#fff', text: 'ПОТРБНI ВОДIЇ' },
     { color: '#0084ff', text: 'JOIN THE FLEET' },
-    { color: '#189c30', text: 'ТРЕБУЮТСЯ ВОДИТЕЛИ' },
-    { color: '#eeff00', text: 'ПОТРБНI ВОДII' },
+    { color: '#189c30', text: 'ВОДИТЕЛИ' },
+    { color: '#eeff00', text: 'ПОТРБНI ВОДIЇ' },
     { color: '#fff', text: 'JOIN THE FLEET' },
-    { color: '#e9622d', text: 'ТРЕБУЮТСЯ ВОДИТЕЛИ' },
+    { color: '#e9622d', text: 'ВОДИТЕЛИ' },
+
+
+
   ];
   
   const iconClass = 'fas fa-truck-pickup'; 
@@ -165,5 +168,10 @@ const linkInfo = [
     currentIndex = (currentIndex + 1) % linkInfo.length;
   }
   
-
 const intervalId = setInterval(updateLinkAppearance, 5000);
+
+
+setTimeout(function() {
+    var floatingButton = document.getElementById('floating-button');
+    floatingButton.style.display = 'block';
+  }, 5000);
