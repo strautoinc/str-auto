@@ -429,7 +429,7 @@ select:focus{
 }
 #floating-button {
     position: fixed;
-    bottom: 25%;
+    bottom: 35%;
     right: 5%;
     color: #055bfb;
     border: none;
@@ -438,7 +438,6 @@ select:focus{
     border: 1px solid var(--primary-color);
     font-size: 1.2rem;
     cursor: pointer;
-    animation: pulsate 1s infinite alternate;
     display: none;
 }
 #floating-button:hover .tooltip {
