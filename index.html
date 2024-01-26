@@ -65,23 +65,29 @@
                                            <div id="result"><div id="LottieContainer"></div></div></form></div></div</div></div></div>
             <div id="appModal" class="modalApp">
                 <div class="form-app"> 
-                    <div class="modal-header"><h2>DRIVER'S APPLICATION</h2></div>
+                     <div class="form-app"><h5>Select Language:</h5>
+                    <div class="tri-state-toggle" id="language-switcher">
+                        <button class="tri-state-toggle-button active" onclick="switchLanguage('en')" data-language="en" id="toggle-button1">EN</button>
+                        <button class="tri-state-toggle-button" onclick="switchLanguage('ukr')" data-language="ukr" id="toggle-button2">UKR</button>
+                        <button class="tri-state-toggle-button" onclick="switchLanguage('ru')" data-language="ru" id="toggle-button3">RU</button></div>
+                        <div class="modal-header" data-translate="head"><h2>DRIVER'S APPLICATION</h2></div>
                     	<div><a href="#close" title="Close" class="close">X</a></div>
                          <form action="https://api.web3forms.com/submit" method="post" aria-autocomplete="on" id="form">
-                            <input type="hidden" name="access_key" value="e213281d-8902-4d84-952b-51c99ae114e5">
-                            <input type="hidden" name="subject" value="New Driver Application">
+                            <input type="hidden" name="access_key" value="1fa79a55-1ded-4acf-96ae-7b0eae27f1aa">
+                            <input type="hidden" name="subject" value="New Job Application">
+                                <input type="hidden" name="redirect" value="window.location.hash">
                                 <input type="checkbox" name="botcheck" id="A" style="display: none;">
                                 <div class="modal-body ">
                                 <div class="modal-form">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" required>
-                                    <label for="dob">Date of Birth</label>
-                                    <input  type="date" id="dob" name="dob" required>
-                                    <label for="email">Email</label>
-                                     <input type="email" name="email" id="email" placeholder="example@mail.com">
-                                     <label for="phone">Phone Number</label>
-                                    <input type="tel" name="phone" id="phone" placeholder="+1(xxx)xxx-xxxx">
-                                    <label for="state">Residency State</label>
+                                    <label for="name" data-translate="name">Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                    <label for="dob"  data-translate="dob">Date of Birth</label>
+                                    <input  type="date" placeholder="mm/dd/yyyy" id="dob" name="dob" required>
+                                    <label for="email"  data-translate="email">Email</label>
+                                     <input type="email" name="email" id="email" placeholder="e.g. name@example.com">
+                                     <label for="phone" data-translate="phone">Phone Number</label>
+                                    <input type="tel" name="phone" id="phone" placeholder="e.g. +1(111)111-1111" >
+                                    <label for="state" data-translate="state">Residency State</label>
                                     <select id="state" name="state">
                                             <option value="" disabled selected>Select...</option>
                                             <option value="AL">AL</option>
@@ -136,7 +142,7 @@
                                             <option value="WV" >WV</option>
                                             <option value="WY">WY</option>
                                         </select>
-                                    <label for="DLstate">Drivers License State</label>
+                                    <label  data-translate="DLstate" for="DLstate">Drivers License State</label>
                                     <select id="DLstate" name="state">
                                         <option value="" disabled selected>Select...</option>
                                         <option value="AL">AL</option>
@@ -191,8 +197,8 @@
                                         <option value="WV" >WV</option>
                                         <option value="WY">WY</option>
                                     </select>
-                                    <label for="country">Citizenship</label>
-                                    <select id="country" required>
+                                    <label for="country" data-translate="country">Citizenship</label>
+                                    <select name="country">
                                         <option value="" disabled selected>Select...</option>
                                         <option value="AFG">Afghanistan</option>
                                         <option value="ALA">Aland Islands</option>
@@ -444,42 +450,40 @@
                                         <option value="ZMB">Zambia</option>
                                         <option value="ZWE">Zimbabwe</option>
                                     </select>
-                                    <label for="status">Marital Status</label>
+                                    <label data-translate="status" for="status">Marital Status</label>
                                     <select name="status" class="form-select" id="status">
                                         <option value="" disabled selected>Select...</option>
-                                        <option value="single">Single</option>
-                                        <option value="married">Married</option>
-                                        <option value="divorced">Divorced</option>
-                                        <option value="widowed">Widowed</option></select></div>                                    
+                                        <option value="single" data-translate="single">Single</option>
+                                        <option value="married" data-translate="married">Married</option>
+                                        <option value="divorced" data-translate="divorced">Divorced</option>
+                                        <option value="widowed" data-translate="widowed">Widowed</option></select></div>                                    
                                     <div class="toggles">
                                         <div class="Q">
-                                            <label class="question">Are you legally authorized to work in the US?</label></div>
+                                            <label class="question" data-translate="work">Are you legally authorized to work in the US?</label></div>
                                             <div class="yes-no">
                                                 <input id="auth-yes" name="auth-toggle" type="radio">
-                                                <label for="auth-yes">Yes</label>
+                                                <label for="auth-yes" data-translate="yes">Yes</label>
                                                 <input id="auth-no" name="auth-toggle" type="radio">
-                                                <label for="auth-no">No</label></div></div>
+                                                <label for="auth-no" data-translate="no">No</label></div></div>
                                 <div class="toggles">
                                     <div class="Q">
-                                        <label class="question">Do you have an active LLC?</label></div>
+                                        <label class="question" data-translate="llc">Do you have an active LLC?</label></div>
                                         <div class="yes-no">
                                             <input id="llc-yes" name="llc-toggle" type="radio">
-                                            <label for="llc-yes">Yes</label>
+                                            <label for="llc-yes" data-translate="yes">Yes</label>
                                             <input id="llc-no" name="llc-toggle" type="radio">
-                                            <label for="llc-no">No</label>
-                                        </div></div>
+                                            <label for="llc-no" data-translate="no">No</label></div></div>
                                 <div class="toggles">
                                     <div class="Q">
-                                        <label class="question">Do you have prior experience?</label></div>
+                                        <label class="question" data-translate="exp">Do you have prior experience?</label></div>
                                         <div class="yes-no">
                                             <input id="exp-yes" name="exp-toggle" type="radio">
-                                            <label for="exp-yes">Yes</label>
+                                            <label for="exp-yes" data-translate="yes">Yes</label>
                                             <input id="exp-no" name="exp-toggle" type="radio">
-                                            <label for="exp-no">No</label>
-                                        </div></div><br>
-                                    <textarea name="message" rows="5" id="message" placeholder="Please describe your previous work experience or relevant information here..."></textarea></div>
+                                            <label for="exp-no" data-translate="no">No</label></div></div><br>
+                                    <textarea name="message" rows="5" id="message" data-translate="message" placeholder="Please provide a brief description of your experience, or any other relative information you would like to share..."></textarea></div>
                                 <div class="modal-footer">
-                                    <button type="submit" id="appForm" class="btn-app">APPLY NOW</button>
+                                    <button type="submit" id="appForm" data-translate="apply" class="btn-app">APPLY NOW</button>
                                     </div>                                    
                                     <div id="result">
                                  <div id="LottieContainer">
