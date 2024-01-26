@@ -144,10 +144,10 @@ document.querySelectorAll('.tri-state-toggle-button').forEach(button => {
 
 
 const linkInfo = [
-    { color: '#fff', text: 'ПОТРБНI ВОДIЇ' },
+    { color: '#fff', text: 'ПОТРIБНI ВОДIЇ' },
     { color: '#0084ff', text: 'JOIN THE FLEET' },
     { color: '#189c30', text: 'ВОДИТЕЛИ' },
-    { color: '#eeff00', text: 'ПОТРБНI ВОДIЇ' },
+    { color: '#eeff00', text: 'ПОТРIБНI ВОДIЇ' },
     { color: '#fff', text: 'JOIN THE FLEET' },
     { color: '#e9622d', text: 'ВОДИТЕЛИ' },
 
