@@ -71,3 +71,45 @@ form.addEventListener("submit", function (e) {
     e.preventDefault();
     submitForm();
 });
+
+/* language switcher */
+let currentLanguage = 'en';
+const translations = {};
+
+function loadLanguageFile(language) {
+  fetch(`./${language}.json`)
+    .then(response => response.json())
+    .then(data => {
+      translations[language] = data;
+      updateContent();
+    })
+    .catch(error => console.error('Error loading language file', error));
+}
+
+function updateContent() {
+  const selectedTranslations = translations[currentLanguage];
+
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const translationKey = element.dataset.translate;
+    if (selectedTranslations.hasOwnProperty(translationKey)) {
+      element.innerText = selectedTranslations[translationKey];
+    }
+  });
+}
+
+function switchLanguage(language) {
+  currentLanguage = language;
+  loadLanguageFile(language);
+}
+
+loadLanguageFile(currentLanguage);
+
+$(document).ready(function(){
+    $(".tri-state-toggle-button").click(function(){
+      $(".tri-state-toggle-button").removeClass("active");
+      $(this).addClass("active");
+
+      const language = $(this).data('language');
+      switchLanguage(language);
+    });
+  });
