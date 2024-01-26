@@ -434,6 +434,7 @@ select:focus {
     color: var(--primary-color);
 }
 .footer .contact {
+    margin-top: 5%;
     text-align: center;
     justify-content: center;
     align-items: center;
