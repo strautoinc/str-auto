@@ -70,6 +70,9 @@ img {
 #nav-menu ul li a:hover {
     color: #000;
 }
+#join {
+    animation: pulsate 1s infinite alternate;
+}
 .container .logo {
     margin: 1%;
 }
