@@ -444,6 +444,7 @@ select:focus{
     padding: 1%;
     border-radius: 10%;
     border: 1px solid var(--primary-color);
+    box-shadow:rgb(213, 97, 30) 0px 0px 7px 0px;
     font-size: 1.2rem;
     cursor: pointer;
     display: none;
