@@ -170,8 +170,3 @@ const linkInfo = [
   
 const intervalId = setInterval(updateLinkAppearance, 5000);
 
-
-setTimeout(function() {
-    var floatingButton = document.getElementById('floating-button');
-    floatingButton.style.display = 'block';
-  }, 5000);
