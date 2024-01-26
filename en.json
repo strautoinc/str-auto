@@ -1,0 +1,24 @@
+{
+    "head": "Driver Application",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "dob": "Date of Birth",
+    "state": "Residence State",
+    "DLstate": "Driver License State",
+    "country": "Citizenship",
+    "status": "Marital Status",
+    "statusOptions": {
+        "single": "Single",
+       "married": "Married",
+       "divorced": "Divorced",
+       "widowed": "Widowed"
+    },
+    "work": "Are you legally authorized to work in the US?",
+    "yes": "Yes",
+    "no": "No",
+    "llc": "Do you have an active LLC?",
+    "exp": "Do you have prior experience?",
+    "message": "Please provide a brief description of your experience, or any other relative information you would like to share...",
+    "apply": "Apply Now"
+}
