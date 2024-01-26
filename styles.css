@@ -452,7 +452,7 @@ select:focus{
     opacity: 1;
 }
 .tooltip {
-    position: fixed;
+    position: absolute;
     right: 80%;
     width: 5rem;
     font-size: 1rem;
