@@ -251,6 +251,9 @@ select:focus {
     border-radius: 5px;
     box-shadow: 0 0 0 0.1rem rgba(0, 162, 255, 0.645);
 }
+::placeholder {
+    color: #8a8686ed;
+}
 .modalApp {
     position: fixed;
     top: 0;
@@ -281,6 +284,41 @@ select:focus {
     margin: 5% auto;
     border-radius: 5px;
     background-color: #000000d1;
+}
+.tri-state-toggle {
+    background: rgba(0,0,0,0.8);
+    box-shadow: inset 0 2px 8px 0 rgba(165,170,174,0.25);
+    border-radius: 24px;
+    display: inline-block;
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: row;
+    transition: all 500ms ease; 
+}
+.tri-state-toggle-button {
+    border-radius: 22px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    background-color: transparent;
+    border: 0px solid transparent;
+    margin: 2px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease; 
+}
+.tri-state-toggle-button.active {
+    background-color: var(--primary-color);
+    border: 0px solid rgba(207,207,207,0.6);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+    color: white;
+    font-weight: 500;
+    transition: all .5s ease-in;
+}
+.tri-state-toggle-button:focus {
+    outline: none;
 }
 .modal-header {
     line-height: 2rem;
