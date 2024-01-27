@@ -495,7 +495,7 @@ footer a {
     text-align: center;
     font-size: 0.7rem;
     border-top: thin solid var(--light-color);
-    padding: 1%;
+    padding-top: 1%;
 }
 /* Utility Classes */
 .container {
