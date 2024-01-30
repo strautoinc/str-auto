@@ -39,14 +39,13 @@ img {
 #nav-menu {
     background-color: var(--dark-color);
     width: 100%;
-    z-index: 9;
     transition: 0.5s;
     margin-top: 0;
+    padding: 1%;
 }
 .fixed-nav nav {
     position: fixed;
     top: 0;
-    z-index: 1;
 }
 #nav-menu .container {
     display: grid;
@@ -62,8 +61,7 @@ img {
 }
 #nav-menu .menu ul li a {
     font-size: 1rem;
-    padding: 10px;
-    margin: 10px;
+    margin: 1rem;
     transition: 0.5s;
     text-decoration: none;
 }
@@ -77,25 +75,26 @@ img {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.2);
     }
 }
 .container .logo {
-    margin: 1%;
+    margin: 3%;
 }
 /* Banner */
 .main-banner {
     width: 100%;
     margin: 0;
-    padding: 0 15px;
+    padding: 3%;
 }
 .main-banner .container {
     background-size: contain;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-image: url(images/fon.jpg);
@@ -103,8 +102,9 @@ img {
 }
 .banner-content {
     display: grid;
-    grid-template-rows: 3fr 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1.5fr;
 }
+
 .banner-text {
     grid-row: 3;
     display: flex;
@@ -113,31 +113,36 @@ img {
     align-items: center;
     text-align: center;
     letter-spacing: 10px;
-    padding: 1.5%;
+    padding: 1%;
     background-color: rgba(255, 255, 255, 0.148);
 }
+
 .banner-text h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #ffffff;
+    line-height: 3rem;
     text-transform: uppercase;
-    margin-bottom: 1%;
 }
+
 .banner-text p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
     padding: 1%;
     color: #ffffff;
     border-top: 1px solid var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
     text-transform: uppercase;
 }
+
 .main-buttons {
     grid-row: 4;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin: 5% 3%;
+    margin: 3%;
 }
+
 /* Modals*/
 .close {
     background: #7c3f06d6;
@@ -183,7 +188,7 @@ img {
     pointer-events: auto;
 }
 
-.modalDialog>div {
+.modalDialog > div {
     width: 75%;
     position: relative;
     margin: 10% auto;
@@ -241,7 +246,7 @@ input {
     text-transform: none;
     font-family: 'Nunito', sans-serif;
     font-size: 0.9rem;
-    padding: 5px;
+    padding: 1%;
     border: var(--light-color) 1px solid;
     border-radius: 5px;
     color: #fff;
@@ -250,9 +255,9 @@ input {
 
 textarea {
     width: 95%;
-    padding: 5px;
+    padding: 1%;
     text-transform: none;
-    margin: 5px;
+    margin: 1%;
     border: var(--light-color) 1px solid;
     border-radius: 5px;
     color: #fff;
@@ -266,7 +271,7 @@ select {
     font-family: 'Nunito', sans-serif;
     text-transform: none;
     font-size: 0.9rem;
-    padding: 5px;
+    padding: 1%;
     border: var(--light-color) 1px solid;
     border-radius: 5px;
     color: var(--light-color);
@@ -303,7 +308,7 @@ select:focus {
     pointer-events: auto;
 }
 
-.modalApp>div {
+.modalApp > div {
     width: 85%;
     height: auto;
     position: relative;
@@ -430,6 +435,7 @@ select:focus {
     height: auto;
 }
 /* Footer */
+
 footer {
     width: 100%;
     background-color: var(--dark-color);
@@ -605,108 +611,36 @@ footer a {
 }
 
 @media only screen and (max-width: 800px) {
-    body {
-        background-color: #303030;
-        background-blend-mode: color-burn;
-    }
-
-    #nav-menu {
-        padding: 5%;
-    }
-
     #nav-menu .logo {
         width: 120px;
     }
-
-    .menu {
-        font-size: 1.5rem;
-        padding: 7px;
-    }
-
-    .menu-btn {
-        display: none;
-    }
-
     #nav-phone {
         display: none;
     }
-
-    .main-banner .container {
-        background-size: contain;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-position: top;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-image: url(images/fon.jpg);
-        z-index: 5;
-    }
-
     .banner-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 5%;
+        grid-template-rows: 1fr 0.5fr 1fr 0.5fr;
     }
-
-    .banner-content .banner-text {
-        margin-top: 70%;
+    
+    .banner-text h1 {
+        font-size: 2rem;
+        line-height: 3rem;
     }
-
+    
     .banner-text p {
         font-size: 1rem;
+        line-height: 1.5rem;
     }
-
-    .banner-text h1 {
-        font-size: 1.9rem;
+    
+    .main-buttons {
+        padding: 7%;
+        margin-bottom: 10%;
     }
 
     .btn {
-        background: transparent;
-        padding: 10px 15px;
-        border: thin solid #fff;
-        color: #fff;
-        outline: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.5s;
-        font-size: 0.8rem;
-        text-decoration: none;
-        text-transform: uppercase;
+        font-size: 0.9rem;
+
     }
 
-    .btn i:hover {
-        color: #000;
-        cursor: pointer;
-        background-color: var(--primary-color);
-    }
-
-    .btn-main {
-        background: transparent;
-        color: #ff7300;
-        border: thin solid var(--primary-color);
-    }
-
-    .btn-main i:hover {
-        opacity: 0.8;
-        background-color: var(--primary-color);
-        color: #000;
-        cursor: pointer;
-    }
-
-    .btn-main:hover {
-        background-color: var(--primary-color);
-        color: #000;
-        border: thin solid #ff7300;
-        cursor: pointer;
-    }
-
-    .main-buttons {
-        margin: 5%;
-        display: inline-flex;
-        justify-content: space-evenly;
-    }
     .toggles input[type="radio"] {
         display: none;
     }
@@ -750,4 +684,9 @@ footer a {
         font-size: 1.2rem;
     }
       
+}
+@media only screen and (min-width: 1100px) {
+    .banner-content {
+        grid-template-rows: 2fr 2fr 1fr 1fr;
+    }
 }
