@@ -618,7 +618,7 @@ footer a {
         display: none;
     }
     .banner-content {
-        grid-template-rows: 1fr 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr 0.7fr 1fr 0.5fr;
     }
     
     .banner-text h1 {
@@ -633,7 +633,7 @@ footer a {
     
     .main-buttons {
         margin-left: 1%;
-        margin: 10% 0;
+        margin: 15% 0;
     }
 
     .btn {
