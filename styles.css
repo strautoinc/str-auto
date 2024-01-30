@@ -617,8 +617,8 @@ footer a {
     #nav-phone {
         display: none;
     }
-    .menu{
-        font-size: 1rem;
+   #nav-menu .menu .btn {
+        font-size: 0.8rem;
     }
     .banner-content {
         grid-template-rows: 1fr 0.7fr 1fr 0.5fr;
