@@ -22,15 +22,14 @@ const result = document.getElementById('result');
     //lottie //
         function playAnimation() {
             const animationPath = 'images/lottie.json';
-            const container = document.getElementById('result');
-
             const animation = lottie.loadAnimation({
-                container: container,
+                container: result,
                 renderer: 'svg',
                 loop: false,
                 autoplay: true,
                 path: animationPath,
             });
+        }
 
 
         function submitForm() {
@@ -40,40 +39,39 @@ const result = document.getElementById('result');
             result.innerHTML = "Processing...";
 
             fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    result.style.display = "block";
-                    playAnimation();
-                } else {
-                    console.log(response);
-                    result.style.display = "block";
-                    playAnimation();                }
-            })
-            .catch((error) => {
-                result.innerHTML = "Something went wrong!";
-            })
-            .then(function () {
-                form.reset();
-                setTimeout(() => {
-                    result.style.display = "none";
-                }, 4000);
-            });}
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.style.display = "block";
+                    } else {
+                        console.log(response);
+                        result.style.display = "block";
+                    }
+                })
+                .catch((error) => {
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 4000);
+                });
+            };
         
-    
                 form.addEventListener("submit", function (e) {
                     e.preventDefault();
                     submitForm();
                     playAnimation();
-                    }
-                    );}
+                    });
+                
 
 /* language switcher */
 let currentLanguage = 'en';
@@ -97,9 +95,7 @@ function updateContent() {
         if (selectedTranslations.hasOwnProperty(translationKey)) {
             element.innerText = selectedTranslations[translationKey];
 
-            // Check if the element is an input with a placeholder attribute
             if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
-                // Update the placeholder
                 element.placeholder = selectedTranslations[translationKey];
             }
         }
@@ -111,25 +107,20 @@ function switchLanguage(language) {
     loadLanguageFile(language);
 }
 
-// Initial setup - Load default language (English)
 loadLanguageFile(currentLanguage);
 
 document.querySelectorAll('.tri-state-toggle-button').forEach(button => {
     button.addEventListener('click', event => {
-        // Remove 'active' class from all buttons
         document.querySelectorAll('.tri-state-toggle-button').forEach(btn => btn.classList.remove('active'));
 
-        // Add 'active' class to the clicked button
         button.classList.add('active');
 
-        // Update placeholders based on the active button
         const language = button.dataset.language;
         document.querySelector('#name').placeholder = data[language].name;
         document.querySelector('#please').placeholder = data[language].please;
     });
 });
 
-// Rest of your code...
   
   var data = {
     "en": {
@@ -146,12 +137,10 @@ document.querySelectorAll('.tri-state-toggle-button').forEach(button => {
 const linkInfo = [
     { color: '#fff', text: 'ПОТРIБНI ВОДIЇ' },
     { color: '#0084ff', text: 'JOIN THE FLEET' },
-    { color: '#189c30', text: 'ВОДИТЕЛИ' },
+    { color: '#189c30', text: 'ИЩЕМ ВОДИТЕЛЕЙ' },
     { color: '#eeff00', text: 'ПОТРIБНI ВОДIЇ' },
     { color: '#fff', text: 'JOIN THE FLEET' },
-    { color: '#e9622d', text: 'ВОДИТЕЛИ' },
-
-
+    { color: '#e9622d', text: 'ИЩЕМ ВОДИТЕЛЕЙ' },
 
   ];
   
@@ -169,4 +158,3 @@ const linkInfo = [
   }
   
 const intervalId = setInterval(updateLinkAppearance, 5000);
-
