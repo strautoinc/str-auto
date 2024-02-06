@@ -158,3 +158,6 @@ const linkInfo = [
   }
   
 const intervalId = setInterval(updateLinkAppearance, 5000);
+
+  type="text/javascript"
+  src="https://app.termly.io/resource-blocker/e70fcce7-1cbb-4e1a-a246-497b4c62c06c?autoBlock=on"
