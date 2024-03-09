@@ -149,8 +149,8 @@
                                             <option value="WV" >WV</option>
                                             <option value="WY">WY</option>
                                         </select>
-                                    <label  data-translate="DLstate" for="DLstate">Drivers License State</label>
-                                    <select id="DLstate" name="state">
+                                    <label for="DLstate" data-translate="DLstate">Drivers License State</label>
+                                    <select id="DLstate" name="DLstate">
                                         <option value="" disabled selected>Select...</option>
                                         <option value="AL">AL</option>
                                         <option value="AK">AK</option>
@@ -205,7 +205,7 @@
                                         <option value="WY">WY</option>
                                     </select>
                                     <label for="country" data-translate="country">Citizenship</label>
-                                    <select id="country" required>
+                                    <select id="country" name="country" required>
                                         <option value="" disabled selected>Select...</option>
                                         <option value="AFG">Afghanistan</option>
                                         <option value="ALA">Aland Islands</option>
@@ -467,25 +467,25 @@
                                         <div class="Q">
                                             <label class="question" data-translate="work">Are you legally authorized to work in the US?</label></div>
                                             <div class="yes-no">
-                                                <input id="auth-yes" name="auth-toggle" type="radio">
+                                                <input id="auth-yes" name="workAuth" type="radio">
                                                 <label for="auth-yes" data-translate="yes">Yes</label>
-                                                <input id="auth-no" name="auth-toggle" type="radio">
+                                                <input id="auth-no" name="NoWorkAuth" type="radio">
                                                 <label for="auth-no" data-translate="no">No</label></div></div>
                                 <div class="toggles">
                                     <div class="Q">
                                         <label class="question" data-translate="llc">Do you have an active LLC?</label></div>
                                         <div class="yes-no">
-                                            <input id="llc-yes" name="llc-toggle" type="radio">
+                                            <input id="llc-yes" name="LLC" type="radio">
                                             <label for="llc-yes" data-translate="yes">Yes</label>
-                                            <input id="llc-no" name="llc-toggle" type="radio">
+                                            <input id="llc-no" name="noLLC" type="radio">
                                             <label for="llc-no" data-translate="no">No</label></div></div>
                                 <div class="toggles">
                                     <div class="Q">
                                         <label class="question" data-translate="exp">Do you have prior experience?</label></div>
                                         <div class="yes-no">
-                                            <input id="exp-yes" name="exp-toggle" type="radio">
+                                            <input id="exp-yes" name="Experience" type="radio">
                                             <label for="exp-yes" data-translate="yes">Yes</label>
-                                            <input id="exp-no" name="exp-toggle" type="radio">
+                                            <input id="exp-no" name="noExperience" type="radio">
                                             <label for="exp-no" data-translate="no">No</label></div></div><br>
                                     <textarea name="message" rows="5" id="please" data-translate="message" placeholder="Please provide a brief description of your experience, or any other relative information you would like to share..."></textarea></div>
                                 <div class="modal-footer">
